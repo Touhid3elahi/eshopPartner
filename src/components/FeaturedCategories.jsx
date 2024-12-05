@@ -77,7 +77,7 @@ const FeaturedCategories = () => {
         <div className="row">
           <div className="col-12">
             <div className="section-title">
-              <h2>Featured Categories</h2>
+              <h2>注目のカテゴリー</h2>
               <p>
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered alteration in some form.
