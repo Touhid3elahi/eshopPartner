@@ -1,4 +1,4 @@
-import {React, useState } from "react";
+import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from '../../assets/images/logo/デンカハブ.png';
 
@@ -15,7 +15,7 @@ const Topbar = () => {
                   <div className="select-position">
                     <select id="select4">
                       <option value="0" selected>
-                      ¥ JPY
+                        ¥ JPY
                       </option>
                       <option value="1">€ EURO</option>
                       <option value="2">$ CAD</option>
@@ -29,7 +29,7 @@ const Topbar = () => {
                   <div className="select-position">
                     <select id="select5">
                       <option value="0" selected>
-                        日本語
+                        日本語1
                       </option>
                       <option value="1">
                         English
@@ -53,6 +53,10 @@ const Topbar = () => {
                 <li>
                   <Link to="about-us.html">DenkiShopにすいて</Link>
                 </li>
+                <li>
+                  <Link to="/product-grid">ProductList</Link>
+                </li>
+
                 <li>
                   <Link to="contact.html">店舗案内</Link>
                 </li>
@@ -103,7 +107,7 @@ const HeaderMiddle = () => {
                   </div>
                 </div>
                 <div className="search-input">
-                  <input type="text" placeholder="Search" />
+                  <input type="text" placeholder="検索" />
                 </div>
                 <div className="search-btn">
                   <button>
@@ -118,7 +122,7 @@ const HeaderMiddle = () => {
               <div className="nav-hotline">
                 <i className="lni lni-phone"></i>
                 <h3>
-                ホットライン: <span>(+100) 123 456 7890</span>
+                  ホットライン: <span>(+100) 123 456 7890</span>
                 </h3>
               </div>
               <div className="navbar-cart">
@@ -219,52 +223,39 @@ const HeaderBottom = () => {
                 className="cat-button"
                 onClick={() => setIsExpanded(!isExpanded)}
               >
-                <i className="lni lni-menu"></i>全てのカテゴリーから探す
+                <i className="lni lni-menu"></i>Explore All Categories
               </span>
               <ul
-                className={`sub-category ${
-                  isExpanded ? 'expanded' : 'collapsed'
-                }`}
+                className={`sub-category ${isExpanded ? 'expanded' : 'collapsed'
+                  }`}
               >
                 <li>
                   <Link to="product-grids.html">
-                    電線・ケーブル <i className="lni lni-chevron-right"></i>
+                    Category 1 <i className="lni lni-chevron-right"></i>
                   </Link>
                   <ul className="inner-sub-category">
                     <li>
-                      <Link to="product-grids.html">厚鋼電線管・付属品（GP）</Link>
+                      <Link to="product-grids.html">Subcategory 1.1</Link>
                     </li>
                     <li>
-                      <Link to="product-grids.html">ねじなし電線管・付属品（EP)</Link>
+                      <Link to="product-grids.html">Subcategory 1.2</Link>
                     </li>
                     <li>
-                      <Link to="product-grids.html">薄鋼電線管・付属品（CP）</Link>
+                      <Link to="product-grids.html">Subcategory 1.3</Link>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <Link to="product-grids.html">電線管付属品・配管材関連</Link>
+                  <Link to="product-grids.html">Category 2</Link>
                 </li>
                 <li>
-                  <Link to="product-grids.html">モール・ラック付属品・配線ダクト関連</Link>
+                  <Link to="product-grids.html">Category 3</Link>
                 </li>
                 <li>
-                  <Link to="product-grids.html">配線器具</Link>
+                  <Link to="product-grids.html">Category 4</Link>
                 </li>
                 <li>
-                  <Link to="product-grids.html">ブレーカー・開閉器関連</Link>
-                </li>
-                <li>
-                  <Link to="product-grids.html">分電盤・ボックス</Link>
-                </li>
-                <li>
-                  <Link to="product-grids.html">ランプ</Link>
-                </li>
-                <li>
-                  <Link to="product-grids.html">ブレーカー・開閉器関連</Link>
-                </li>
-                <li>
-                  <Link to="product-grids.html">ブレーカー・開閉器関連</Link>
+                  <Link to="product-grids.html">Category 5</Link>
                 </li>
               </ul>
             </div>
@@ -293,10 +284,10 @@ const HeaderBottom = () => {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="about-us.html">DenkiShopにすいて</Link>
+                    <Link to="about-us.html">About DenkiShop</Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="contact.html">店舗案内</Link>
+                    <Link to="contact.html">Contact Us</Link>
                   </li>
                 </ul>
               </div>
@@ -322,6 +313,7 @@ const HeaderBottom = () => {
         </div>
       </div>
     </div>
+
   );
 };
 
