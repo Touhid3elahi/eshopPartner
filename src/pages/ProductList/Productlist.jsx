@@ -123,7 +123,7 @@ const Productlist = () => {
                                 <div className="row align-items-center">
                                     <div className="col-lg-7 col-md-8 col-12">
                                         <div className="product-sorting">
-                                            <label htmlFor="sorting">並べ替え：</label>
+                                            <label htmlFor="sorting">Sort by:</label>
                                             <select className="form-control" id="sorting">
                                             <option>人気順</option>
                                             <option>価格が低い順</option>
