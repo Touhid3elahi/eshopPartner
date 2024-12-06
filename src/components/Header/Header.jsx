@@ -54,7 +54,7 @@ const Topbar = () => {
                   <Link to="about-us.html">DenkiShopにすいて</Link>
                 </li>
                 <li>
-                  <Link to="/product-grid">ProductList</Link>
+                  <Link to="/product-grid">製品リスト</Link>
                 </li>
 
                 <li>
@@ -223,7 +223,7 @@ const HeaderBottom = () => {
                 className="cat-button"
                 onClick={() => setIsExpanded(!isExpanded)}
               >
-                <i className="lni lni-menu"></i>Explore All Categories
+                <i className="lni lni-menu"></i>全てのカテゴリー
               </span>
               <ul
                 className={`sub-category ${isExpanded ? 'expanded' : 'collapsed'
@@ -231,31 +231,42 @@ const HeaderBottom = () => {
               >
                 <li>
                   <Link to="product-grids.html">
-                    Category 1 <i className="lni lni-chevron-right"></i>
+                    カテゴリー 1 <i className="lni lni-chevron-right"></i>
                   </Link>
                   <ul className="inner-sub-category">
                     <li>
-                      <Link to="product-grids.html">Subcategory 1.1</Link>
+                      <Link to="product-grids.html">サブカテゴリ 1.1</Link>
                     </li>
                     <li>
-                      <Link to="product-grids.html">Subcategory 1.2</Link>
+                      <Link to="product-grids.html">サブカテゴリ 1.2</Link>
                     </li>
                     <li>
-                      <Link to="product-grids.html">Subcategory 1.3</Link>
+                      <Link to="product-grids.html">サブカテゴリ 1.3</Link>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <Link to="product-grids.html">Category 2</Link>
+                  <Link to="product-grids.html">カテゴリー 2</Link>
+                  <ul className="inner-sub-category">
+                    <li>
+                      <Link to="product-grids.html">サブカテゴリ 1.1</Link>
+                    </li>
+                    <li>
+                      <Link to="product-grids.html">サブカテゴリ 1.2</Link>
+                    </li>
+                    <li>
+                      <Link to="product-grids.html">サブカテゴリ 1.3</Link>
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  <Link to="product-grids.html">Category 3</Link>
+                  <Link to="product-grids.html">カテゴリー 3</Link>
                 </li>
                 <li>
-                  <Link to="product-grids.html">Category 4</Link>
+                  <Link to="product-grids.html">カテゴリー 4</Link>
                 </li>
                 <li>
-                  <Link to="product-grids.html">Category 5</Link>
+                  <Link to="product-grids.html">カテゴリー 5</Link>
                 </li>
               </ul>
             </div>
@@ -284,10 +295,13 @@ const HeaderBottom = () => {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="about-us.html">About DenkiShop</Link>
+                    <Link to="about-us.html">DenkiShopにすいて</Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="contact.html">Contact Us</Link>
+                    <Link to="/product-grid">製品リスト</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="contact.html">店舗案内</Link>
                   </li>
                 </ul>
               </div>

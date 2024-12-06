@@ -1,6 +1,12 @@
-import React from "react";
+import React , {useState} from "react";
 
 const Productlist = () => {
+  const [itemsPerPage, setItemsPerPage] = useState(12); // ページごとのアイテム数
+  const [totalItems] = useState(50); // 合計アイテム数（動的に設定可能）
+  const [currentPage, setCurrentPage] = useState(1); // 現在のページ番号
+
+  const startIndex = (currentPage - 1) * itemsPerPage + 1;
+  const endIndex = Math.min(currentPage * itemsPerPage, totalItems);
     return (
         <section className="product-grids section">
             <div className="container">
@@ -10,7 +16,7 @@ const Productlist = () => {
                         <div className="product-sidebar">
                             {/* Search Widget */}
                             <div className="single-widget search">
-                                <h3>Search Product</h3>
+                                <h3>製品を検索</h3>
                                 <form action="#">
                                     <input type="text" placeholder="Search Here..." />
                                     <button type="submit">
@@ -20,35 +26,23 @@ const Productlist = () => {
                             </div>
                             {/* Categories Widget */}
                             <div className="single-widget">
-                                <h3>All Categories</h3>
+                                <h3>全てのカテゴリー</h3>
                                 <ul className="list">
                                     <li>
-                                        <a href="product-grids.html">Computers & Accessories </a>
+                                        <a href="product-grids.html">カテゴリー1</a>
                                         <span>(1138)</span>
                                     </li>
                                     <li>
-                                        <a href="product-grids.html">Smartphones & Tablets</a>
+                                        <a href="product-grids.html">カテゴリー2</a>
                                         <span>(2356)</span>
                                     </li>
                                     <li>
-                                        <a href="product-grids.html">TV, Video & Audio</a>
+                                        <a href="product-grids.html">カテゴリー</a>
                                         <span>(420)</span>
                                     </li>
                                     <li>
-                                        <a href="product-grids.html">Cameras, Photo & Video</a>
+                                        <a href="product-grids.html">カテゴリー</a>
                                         <span>(874)</span>
-                                    </li>
-                                    <li>
-                                        <a href="product-grids.html">Headphones</a>
-                                        <span>(1239)</span>
-                                    </li>
-                                    <li>
-                                        <a href="product-grids.html">Wearable Electronics</a>
-                                        <span>(340)</span>
-                                    </li>
-                                    <li>
-                                        <a href="product-grids.html">Printers & Ink</a>
-                                        <span>(512)</span>
                                     </li>
                                 </ul>
                             </div>
@@ -66,7 +60,7 @@ const Productlist = () => {
                                     onChange={(e) => (document.getElementById("rangePrimary").value = e.target.value)}
                                 />
                                 <div className="range-inner">
-                                    <label>$</label>
+                                    <label>円</label>
                                     <input type="text" id="rangePrimary" placeholder="100" />
                                 </div>
                             </div>
@@ -76,25 +70,25 @@ const Productlist = () => {
                                 <div className="form-check">
                                     <input className="form-check-input" type="checkbox" id="flexCheckDefault1" />
                                     <label className="form-check-label" htmlFor="flexCheckDefault1">
-                                        $50 - $100 (208)
+                                        円50 - 円100 (208)
                                     </label>
                                 </div>
                                 <div className="form-check">
                                     <input className="form-check-input" type="checkbox" id="flexCheckDefault2" />
                                     <label className="form-check-label" htmlFor="flexCheckDefault2">
-                                        $100 - $500 (311)
+                                        円100 - 円500 (311)
                                     </label>
                                 </div>
                                 <div className="form-check">
                                     <input className="form-check-input" type="checkbox" id="flexCheckDefault3" />
                                     <label className="form-check-label" htmlFor="flexCheckDefault3">
-                                        $500 - $1,000 (485)
+                                        円500 - 円1,000 (485)
                                     </label>
                                 </div>
                                 <div className="form-check">
                                     <input className="form-check-input" type="checkbox" id="flexCheckDefault4" />
                                     <label className="form-check-label" htmlFor="flexCheckDefault4">
-                                        $1,000 - $5,000 (213)
+                                        円1,000 - 円5,000 (213)
                                     </label>
                                 </div>
                             </div>
@@ -104,7 +98,7 @@ const Productlist = () => {
                                 <div className="form-check">
                                     <input className="form-check-input" type="checkbox" id="flexCheckDefault11" />
                                     <label className="form-check-label" htmlFor="flexCheckDefault11">
-                                        Apple (254)
+                                        Makita (254)
                                     </label>
                                 </div>
                                 <div className="form-check">
@@ -129,18 +123,18 @@ const Productlist = () => {
                                 <div className="row align-items-center">
                                     <div className="col-lg-7 col-md-8 col-12">
                                         <div className="product-sorting">
-                                            <label htmlFor="sorting">Sort by:</label>
+                                            <label htmlFor="sorting">並べ替え：</label>
                                             <select className="form-control" id="sorting">
-                                                <option>Popularity</option>
-                                                <option>Low - High Price</option>
-                                                <option>High - Low Price</option>
+                                            <option>人気順</option>
+                                            <option>価格が低い順</option>
+                                            <option>価格が高い順</option>
                                                 <option>Average Rating</option>
                                                 <option>A - Z Order</option>
                                                 <option>Z - A Order</option>
                                             </select>
                                             <h3 className="total-show-product">
-                                                Showing: <span>1 - 12 items</span>
-                                            </h3>
+                                            表示中: <span>{startIndex} - {endIndex} 件</span>
+                                            （全{totalItems}件中）                                            </h3>
                                         </div>
                                     </div>
                                 </div>
@@ -149,215 +143,40 @@ const Productlist = () => {
                                 <div className="tab-pane fade show active" id="nav-grid" role="tabpanel">
                                     <div className="row">
                                         {/* Product Items */}
-                                        <div className="col-lg-4 col-md-6 col-12">
-                                            <div className="single-product">
-                                                <div className="product-image">
-                                                    <img src="https://via.placeholder.com/335x335" alt="#" />
-                                                    <div className="button">
-                                                        <a href="product-details.html" className="btn">
-                                                            <i className="lni lni-cart"></i> Add to Cart
-                                                        </a>
+                                        {Array.from({ length: 9 }).map((_, index) => (
+                                            <div className="col-lg-4 col-md-6 col-12" key={index}>
+                                                <div className="single-product">
+                                                    <div className="product-image">
+                                                        <img
+                                                            src="https://via.placeholder.com/335x335"
+                                                            alt={`Product 円{index + 1}`}
+                                                        />
+                                                        {index % 2 === 0 ? <span className="sale-tag">-20%</span> : null}
+                                                        <div className="button">
+                                                            <a href="product-details.html" className="btn">
+                                                                <i className="lni lni-cart"></i> Add to Cart
+                                                            </a>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div className="product-info">
-                                                    <span className="category">Watches</span>
-                                                    <h4 className="title">
-                                                        <a href="product-grids.html">Xiaomi Mi Band 5</a>
-                                                    </h4>
-                                                    <ul className="review">
-                                                        <li>
-                                                            <i className="lni lni-star-filled"></i>
-                                                        </li>
-                                                    </ul>
-                                                    <div className="price">
-                                                        <span>$199.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-4 col-md-6 col-12">
-                                            <div className="single-product">
-                                                <div className="product-image">
-                                                    <img src="https://via.placeholder.com/335x335" alt="Product 2" />
-                                                    <span className="sale-tag">-25%</span>
-                                                    <div className="button">
-                                                        <a href="product-details.html" className="btn">
-                                                            <i className="lni lni-cart"></i> Add to Cart
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div className="product-info">
-                                                    <span className="category">Speakers</span>
-                                                    <h4 className="title">
-                                                        <a href="product-grids.html">Bluetooth Speaker</a>
-                                                    </h4>
-                                                    <div className="price">
-                                                        <span>$275.00</span>
-                                                        <span className="discount-price">$300.00</span>
+                                                    <div className="product-info">
+                                                        <span className="category">カテゴリプレースホルダー</span>
+                                                        <h4 className="title">
+                                                            <a href="product-grids.html">製品名</a>
+                                                        </h4>
+                                                        <div className="price">
+                                                            <span>円199.00</span>
+                                                            {index % 2 === 0 ? (
+                                                                <span className="discount-price">円250.00</span>
+                                                            ) : null}
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        {/* Product 3 */}
-                                        <div className="col-lg-4 col-md-6 col-12">
-                                            <div className="single-product">
-                                                <div className="product-image">
-                                                    <img src="https://via.placeholder.com/335x335" alt="Product 3" />
-                                                    <div className="button">
-                                                        <a href="product-details.html" className="btn">
-                                                            <i className="lni lni-cart"></i> Add to Cart
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div className="product-info">
-                                                    <span className="category">Cameras</span>
-                                                    <h4 className="title">
-                                                        <a href="product-grids.html">WiFi Security Camera</a>
-                                                    </h4>
-                                                    <div className="price">
-                                                        <span>$399.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* Product 4 */}
-                                        <div className="col-lg-4 col-md-6 col-12">
-                                            <div className="single-product">
-                                                <div className="product-image">
-                                                    <img src="https://via.placeholder.com/335x335" alt="Product 4" />
-                                                    <div className="button">
-                                                        <a href="product-details.html" className="btn">
-                                                            <i className="lni lni-cart"></i> Add to Cart
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div className="product-info">
-                                                    <span className="category">Phones</span>
-                                                    <h4 className="title">
-                                                        <a href="product-grids.html">iPhone 6X Plus</a>
-                                                    </h4>
-                                                    <div className="price">
-                                                        <span>$400.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* Product 5 */}
-                                        <div className="col-lg-4 col-md-6 col-12">
-                                            <div className="single-product">
-                                                <div className="product-image">
-                                                    <img src="https://via.placeholder.com/335x335" alt="Product 5" />
-                                                    <div className="button">
-                                                        <a href="product-details.html" className="btn">
-                                                            <i className="lni lni-cart"></i> Add to Cart
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div className="product-info">
-                                                    <span className="category">Headphones</span>
-                                                    <h4 className="title">
-                                                        <a href="product-grids.html">Wireless Headphones</a>
-                                                    </h4>
-                                                    <div className="price">
-                                                        <span>$350.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* Product 6 */}
-                                        <div className="col-lg-4 col-md-6 col-12">
-                                            <div className="single-product">
-                                                <div className="product-image">
-                                                    <img src="https://via.placeholder.com/335x335" alt="Product 6" />
-                                                    <span className="sale-tag">-50%</span>
-                                                    <div className="button">
-                                                        <a href="product-details.html" className="btn">
-                                                            <i className="lni lni-cart"></i> Add to Cart
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div className="product-info">
-                                                    <span className="category">Speakers</span>
-                                                    <h4 className="title">
-                                                        <a href="product-grids.html">Mini Bluetooth Speaker</a>
-                                                    </h4>
-                                                    <div className="price">
-                                                        <span>$70.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* Product 7 */}
-                                        <div className="col-lg-4 col-md-6 col-12">
-                                            <div className="single-product">
-                                                <div className="product-image">
-                                                    <img src="https://via.placeholder.com/335x335" alt="Product 7" />
-                                                    <span className="new-tag">New</span>
-                                                    <div className="button">
-                                                        <a href="product-details.html" className="btn">
-                                                            <i className="lni lni-cart"></i> Add to Cart
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div className="product-info">
-                                                    <span className="category">Laptops</span>
-                                                    <h4 className="title">
-                                                        <a href="product-grids.html">Apple MacBook Air</a>
-                                                    </h4>
-                                                    <div className="price">
-                                                        <span>$899.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* Product 8 */}
-                                        <div className="col-lg-4 col-md-6 col-12">
-                                            <div className="single-product">
-                                                <div className="product-image">
-                                                    <img src="https://via.placeholder.com/335x335" alt="Product 8" />
-                                                    <div className="button">
-                                                        <a href="product-details.html" className="btn">
-                                                            <i className="lni lni-cart"></i> Add to Cart
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div className="product-info">
-                                                    <span className="category">Headphones</span>
-                                                    <h4 className="title">
-                                                        <a href="product-grids.html">PX7 Wireless Headphones</a>
-                                                    </h4>
-                                                    <div className="price">
-                                                        <span>$100.00</span>
-                                                        <span className="discount-price">$200.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* Product 9 */}
-                                        <div className="col-lg-4 col-md-6 col-12">
-                                            <div className="single-product">
-                                                <div className="product-image">
-                                                    <img src="https://via.placeholder.com/335x335" alt="Product 9" />
-                                                    <div className="button">
-                                                        <a href="product-details.html" className="btn">
-                                                            <i className="lni lni-cart"></i> Add to Cart
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div className="product-info">
-                                                    <span className="category">Cameras</span>
-                                                    <h4 className="title">
-                                                        <a href="product-grids.html">Digital DSLR Camera</a>
-                                                    </h4>
-                                                    <div className="price">
-                                                        <span>$500.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        ))}
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
