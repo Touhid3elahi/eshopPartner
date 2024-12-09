@@ -295,7 +295,7 @@ const HeaderBottom = () => {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="about-us.html">DenkiShopにすいて</Link>
+                    <Link to="about-us.html">私たちについて</Link>
                   </li>
                   <li className="nav-item">
                     <Link to="/product-grid">製品リスト</Link>

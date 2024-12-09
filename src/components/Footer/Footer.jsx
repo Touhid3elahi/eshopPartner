@@ -15,7 +15,7 @@ const Footer = () => {
                             <div className="col-lg-3 col-md-4 col-12">
                                 <div className="footer-logo">
                                     <Link to="#">
-                                    <img src={logo} alt="Logo" />
+                                        <img src={logo} alt="Logo" />
                                     </Link>
                                 </div>
                             </div>
@@ -94,11 +94,12 @@ const Footer = () => {
                                 <div className="single-footer f-link">
                                     <h3>情報</h3>
                                     <ul>
-                                        <li><Link to="#">About Us</Link></li>
-                                        <li><Link to="#">Contact Us</Link></li>
-                                        <li><Link to="#">Downloads</Link></li>
-                                        <li><Link to="#">Sitemap</Link></li>
-                                        <li><Link to="#">FAQs Page</Link></li>
+                                        <li><Link to="#">私たちについて</Link></li>
+                                        <li><Link to="#">お問い合わせ</Link></li>
+                                        <li><Link to="#">ダウンロード</Link></li>
+                                        <li><Link to="#">サイトマップ</Link></li>
+                                        <li><Link to="#">よくある質問</Link></li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -107,11 +108,11 @@ const Footer = () => {
                                 <div className="single-footer f-link">
                                     <h3>部門</h3>
                                     <ul>
-                                        <li><Link to="#">Computers & Accessories</Link></li>
-                                        <li><Link to="#">Smartphones & Tablets</Link></li>
-                                        <li><Link to="#">TV, Video & Audio</Link></li>
-                                        <li><Link to="#">Cameras, Photo & Video</Link></li>
-                                        <li><Link to="#">Headphones</Link></li>
+                                        <li><Link to="#">カテゴリー1</Link></li>
+                                        <li><Link to="#">カテゴリー2</Link></li>
+                                        <li><Link to="#">カテゴリー3</Link></li>
+                                        <li><Link to="#">カテゴリー5</Link></li>
+                                        <li><Link to="#">カテゴリー6</Link></li>
                                     </ul>
                                 </div>
                             </div>

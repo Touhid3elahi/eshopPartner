@@ -2,74 +2,15 @@ import React from 'react';
 import CategoryItem from './CategoryItem';
 
 const FeaturedCategories = () => {
-  const categories = [
-    {
-      title: "TV & Audios",
-      items: [
-        { name: "Smart Television", link: "product-grids.html" },
-        { name: "QLED TV", link: "product-grids.html" },
-        { name: "Audios", link: "product-grids.html" },
-        { name: "Headphones", link: "product-grids.html" },
-        { name: "View All", link: "product-grids.html" },
-      ],
-      image: "https://via.placeholder.com/180x180",
-    },
-    {
-      title: "Desktop & Laptop",
-      items: [
-        { name: "Smart Television", link: "product-grids.html" },
-        { name: "QLED TV", link: "product-grids.html" },
-        { name: "Audios", link: "product-grids.html" },
-        { name: "Headphones", link: "product-grids.html" },
-        { name: "View All", link: "product-grids.html" },
-      ],
-      image: "https://via.placeholder.com/180x180",
-    },
-    {
-      title: "Cctv Camera",
-      items: [
-        { name: "Smart Television", link: "product-grids.html" },
-        { name: "QLED TV", link: "product-grids.html" },
-        { name: "Audios", link: "product-grids.html" },
-        { name: "Headphones", link: "product-grids.html" },
-        { name: "View All", link: "product-grids.html" },
-      ],
-      image: "https://via.placeholder.com/180x180",
-    },
-    {
-      title: "Dslr Camera",
-      items: [
-        { name: "Smart Television", link: "product-grids.html" },
-        { name: "QLED TV", link: "product-grids.html" },
-        { name: "Audios", link: "product-grids.html" },
-        { name: "Headphones", link: "product-grids.html" },
-        { name: "View All", link: "product-grids.html" },
-      ],
-      image: "https://via.placeholder.com/180x180",
-    },
-    {
-      title: "Smart Phones",
-      items: [
-        { name: "Smart Television", link: "product-grids.html" },
-        { name: "QLED TV", link: "product-grids.html" },
-        { name: "Audios", link: "product-grids.html" },
-        { name: "Headphones", link: "product-grids.html" },
-        { name: "View All", link: "product-grids.html" },
-      ],
-      image: "https://via.placeholder.com/180x180",
-    },
-    {
-      title: "Game Console",
-      items: [
-        { name: "Smart Television", link: "product-grids.html" },
-        { name: "QLED TV", link: "product-grids.html" },
-        { name: "Audios", link: "product-grids.html" },
-        { name: "Headphones", link: "product-grids.html" },
-        { name: "View All", link: "product-grids.html" },
-      ],
-      image: "https://via.placeholder.com/180x180",
-    },
-  ];
+  const categories = Array.from({ length: 6 }, (_, index) => ({
+    title: `製品${index + 1}`,
+    items: Array.from({ length: 5 }, (_, itemIndex) => ({
+      name: `項目 テストデータ${itemIndex + 1}`,
+      link: "product-grids.html",
+    })),
+    image: "https://via.placeholder.com/180x180",
+  }));
+  
 
   return (
     <section className="featured-categories section">

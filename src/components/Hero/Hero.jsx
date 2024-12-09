@@ -1,124 +1,132 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
- 
+
 import 'tiny-slider/dist/tiny-slider.css';
 
 
 const Hero = () => {
     useEffect(() => {
         const tns = require('tiny-slider').tns;
-    
+
         tns({
-          container: '.hero-slider',
-          slideBy: 'page',
-          autoplay: true,
-          autoplayButtonOutput: false,
-          mouseDrag: true,
-          gutter: 0,
-          items: 1,
-          nav: false,
-          controls: true,
-          controlsText: ['<i class="lni lni-chevron-left"></i>', '<i class="lni lni-chevron-right"></i>'],
+            container: '.hero-slider',
+            slideBy: 'page',
+            autoplay: true,
+            autoplayButtonOutput: false,
+            mouseDrag: true,
+            gutter: 0,
+            items: 1,
+            nav: false,
+            controls: true,
+            controlsText: ['<i class="lni lni-chevron-left"></i>', '<i class="lni lni-chevron-right"></i>'],
         });
-      }, []); 
+    }, []);
     return (
         <section className="hero-area">
             <div className="container">
                 <div className="row">
+                    {/* Left Spacer (optional for alignment) */}
                     <div className="col-lg-3 col-12"></div>
+
                     {/* Hero Slider Section */}
                     <div className="col-lg-6 col-12 px-0">
                         <div className="slider-head">
-                            {/* Hero Slider */}
                             <div className="hero-slider">
-                                {/* Single Slider */}
+                                {/* Single Slider 1 */}
                                 <div
                                     className="single-slider"
-                                    style={{ backgroundImage: 'url(https://via.placeholder.com/800x500)' }}
+                                    style={{
+                                        backgroundImage: 'url(https://via.placeholder.com/800x500)',
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                    }}
                                 >
-                                    <div className="content">
+                                    <div className="content text-center p-4">
                                         <h2>
-                                            <span>No restocking fee ($35 savings)</span>
-                                            M75 Sport Watch
+                                            <span>手数料なし（$35お得）</span>
+                                            高品質______
                                         </h2>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor
-                                            incididunt ut labore dolore magna aliqua.
+                                            最新のデザインと優れた機能を備えた________を今すぐ手に入れましょう。
                                         </p>
                                         <h3>
-                                            <span>Now Only</span> $320.99
+                                            <span>今だけ</span> $320.99
                                         </h3>
                                         <div className="button">
-                                            <Link to="#" className="btn">Shop Now</Link>
+                                            <Link to="#" className="btn btn-primary">購入する</Link>
                                         </div>
                                     </div>
                                 </div>
-                                {/* End Single Slider */}
-                                {/* Single Slider */}
+
+                                {/* Single Slider 2 */}
                                 <div
                                     className="single-slider"
-                                    style={{ backgroundImage: 'url(https://via.placeholder.com/800x500)' }}
+                                    style={{
+                                        backgroundImage: 'url(https://via.placeholder.com/800x500)',
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                    }}
                                 >
-                                    <div className="content">
+                                    <div className="content text-center p-4">
                                         <h2>
-                                            <span>Big Sale Offer</span>
-                                            Get the Best Deal on CCTV Camera
+                                            <span>ビッグセール</span>
+                                            防犯_____がお得！
                                         </h2>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor
-                                            incididunt ut labore dolore magna aliqua.
+                                            安全を守るための最新の防犯_____セットをこの価格で提供中。
                                         </p>
                                         <h3>
-                                            <span>Combo Only:</span> $590.00
+                                            <span>セット価格:</span> $590.00
                                         </h3>
                                         <div className="button">
-                                            <Link to="#" className="btn">Shop Now</Link>
+                                            <Link to="#" className="btn btn-primary">購入する</Link>
                                         </div>
                                     </div>
                                 </div>
-                                {/* End Single Slider */}
+
                             </div>
-                            {/* End Hero Slider */}
                         </div>
                     </div>
-                    {/* End Hero Slider Section */}
 
                     {/* Right Banners Section */}
                     <div className="col-lg-3 col-12">
                         <div className="row">
-                            <div className="col-lg-12 col-md-6 col-12 md-custom-padding">
-                                {/* Small Banner */}
+                            <div className="col-lg-12 col-md-6 col-12">
+                                {/* Small Banner 1 */}
                                 <div
                                     className="hero-small-banner"
-                                    style={{ backgroundImage: "url('https://via.placeholder.com/370x250')" }}
+                                    style={{
+                                        backgroundImage: "url('https://via.placeholder.com/370x250')",
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                    }}
                                 >
-                                    <div className="content">
+                                    <div className="content text-white p-3">
                                         <h2>
-                                            <span>New line required</span>
-                                            iPhone 12 Pro Max
-                                        </h2>
+                                            <span></span>
+                                            広告掲載場所
+                                                                                    </h2>
                                         <h3>$259.99</h3>
                                     </div>
                                 </div>
-                                {/* End Small Banner */}
                             </div>
+
                             <div className="col-lg-12 col-md-6 col-12">
-                                {/* Small Banner */}
-                                <div className="hero-small-banner style2">
-                                    <div className="content">
-                                        <h2>Weekly Sale!</h2>
-                                        <p>Saving up to 50% off all online store items this week.</p>
-                                        <div className="button">
-                                            <Link className="btn" to="#">Shop Now</Link>
-                                        </div>
+                                {/* Small Banner 2 */}
+                                <div
+                                    className="hero-small-banner style2 bg-primary text-white px-4 rounded"
+                                >
+                                    <h4>毎週のセールオファー！</h4>
+                                    <p>今週はオンラインストアの全商品が最大 50% オフとなります。</p>
+                                    <div className="button mt-3">
+                                        <Link className="btn btn-light" to="#">Shop Now</Link>
                                     </div>
                                 </div>
-                                {/* End Small Banner */}
                             </div>
                         </div>
                     </div>
-                    {/* End Right Banners Section */}
                 </div>
+
             </div>
         </section>
     )
