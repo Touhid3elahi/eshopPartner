@@ -8,7 +8,7 @@ const Topbar = () => {
     <div className="topbar">
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-lg-4 col-md-4 col-12">
+          <div className="col-lg-3 col-md-3 col-12">
             <div className="top-left">
               <ul className="menu-top-link">
                 <li>
@@ -44,11 +44,11 @@ const Topbar = () => {
               </ul>
             </div>
           </div>
-          <div className="col-lg-4 col-md-4 col-12">
+          <div className="col-lg-6 col-md-6 col-12">
             <div className="top-middle">
               <ul className="useful-links">
                 <li>
-                  <Link to="index.html">Home</Link>
+                  <Link to="index.html">ホーム</Link>
                 </li>
                 <li>
                   <Link to="about-us.html">私たちについて</Link>
@@ -63,7 +63,7 @@ const Topbar = () => {
               </ul>
             </div>
           </div>
-          <div className="col-lg-4 col-md-4 col-12">
+          <div className="col-lg-3 col-md-3 col-12">
             <div className="top-end">
               <div className="user">
                 <i className="lni lni-user"></i> Hello
@@ -291,7 +291,7 @@ const HeaderBottom = () => {
                 <ul id="nav" className="navbar-nav ms-auto">
                   <li className="nav-item">
                     <Link to="index.html" className="active">
-                      Home
+                    ホーム
                     </Link>
                   </li>
                   <li className="nav-item">
