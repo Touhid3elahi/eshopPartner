@@ -60,8 +60,7 @@ const Productlist = () => {
                                     onChange={(e) => (document.getElementById("rangePrimary").value = e.target.value)}
                                 />
                                 <div className="range-inner">
-                                    <label>円</label>
-                                    <input type="text" id="rangePrimary" placeholder="100" />
+                                    <input type="text" id="rangePrimary" placeholder="100" /><span>円</span>
                                 </div>
                             </div>
                             {/* Filter by Price Widget */}
@@ -70,25 +69,25 @@ const Productlist = () => {
                                 <div className="form-check">
                                     <input className="form-check-input" type="checkbox" id="flexCheckDefault1" />
                                     <label className="form-check-label" htmlFor="flexCheckDefault1">
-                                        円50 - 円100 (208)
+                                        50円 - 100円 (208)
                                     </label>
                                 </div>
                                 <div className="form-check">
                                     <input className="form-check-input" type="checkbox" id="flexCheckDefault2" />
                                     <label className="form-check-label" htmlFor="flexCheckDefault2">
-                                        円100 - 円500 (311)
+                                        100円 - 500円 (311)
                                     </label>
                                 </div>
                                 <div className="form-check">
                                     <input className="form-check-input" type="checkbox" id="flexCheckDefault3" />
                                     <label className="form-check-label" htmlFor="flexCheckDefault3">
-                                        円500 - 円1,000 (485)
+                                        500円 - 1,000円 (485)
                                     </label>
                                 </div>
                                 <div className="form-check">
                                     <input className="form-check-input" type="checkbox" id="flexCheckDefault4" />
                                     <label className="form-check-label" htmlFor="flexCheckDefault4">
-                                        円1,000 - 円5,000 (213)
+                                        1,000円 - 5,000円 (213)
                                     </label>
                                 </div>
                             </div>
@@ -149,7 +148,7 @@ const Productlist = () => {
                                                     <div className="product-image">
                                                         <img
                                                             src="https://via.placeholder.com/335x335"
-                                                            alt={`Product 円{index + 1}`}
+                                                            alt={`Product {index + 1}円`}
                                                         />
                                                         {index % 2 === 0 ? <span className="sale-tag">-20%</span> : null}
                                                         <div className="button">
@@ -164,9 +163,9 @@ const Productlist = () => {
                                                             <a href="product-grids.html">製品名</a>
                                                         </h4>
                                                         <div className="price">
-                                                            <span>円199.00</span>
+                                                            <span>199.00円</span>
                                                             {index % 2 === 0 ? (
-                                                                <span className="discount-price">円250.00</span>
+                                                                <span className="discount-price">250.00円</span>
                                                             ) : null}
                                                         </div>
                                                     </div>

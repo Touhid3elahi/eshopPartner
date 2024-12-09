@@ -38,39 +38,24 @@ const Hero = () => {
 
     const sliderItems = [
         {
-            title: '手数料なし（$35お得）',
-            description: '最新のデザインと優れた機能を備えた________を今すぐ手に入れましょう。',
-            price: '今だけ $320.99',
-            bgImage: 'https://via.placeholder.com/800x500',
-        },
-        {
-            title: 'ビッグセール',
-            description: '安全を守るための最新の防犯_____セットをこの価格で提供中。',
-            price: 'セット価格: $590.00',
+            title: 'おすすめ商品画像',
+            description: '記載内容\n・商品名\n・値段\n・商品概要',
+            price: '値段',
             bgImage: 'https://via.placeholder.com/800x500',
         },
     ];
 
     const rightBanners = [
         {
+            title: 'おすすめ商品画像',
+            description: '記載内容\n・商品名\n・値段\n・商品概要',
             bgImage: 'https://via.placeholder.com/370x250',
-            title: '広告掲載場所',
-            price: '$259.99',
         },
         {
-            bgColor: 'bg-primary',
-            textColor: 'text-white',
-            content: (
-                <>
-                    <h4>毎週のセールオファー！</h4>
-                    <p>今週はオンラインストアの全商品が最大 50% オフとなります。</p>
-                    <div className="button mt-3">
-                        <Link className="btn btn-light" to="#">
-                            Shop Now
-                        </Link>
-                    </div>
-                </>
-            ),
+            title: '宣伝文',
+            description: '例）週末セール20%OFF',
+            bgColor: '#007bff',
+            bgImage: 'https://via.placeholder.com/370x250',
         },
     ];
 
@@ -166,7 +151,7 @@ const Hero = () => {
                             {rightBanners.map((banner, index) => (
                                 <div
                                     key={index}
-                                    className={`hero-small-banner ${banner.bgColor || ''} ${banner.textColor || ''}`}
+                                    className={`hero-small-banner m-2 ${banner.bgColor || ''} ${banner.textColor || ''}`}
                                     style={{
                                         backgroundImage: banner.bgImage
                                             ? `url(${banner.bgImage})`
@@ -181,6 +166,7 @@ const Hero = () => {
                                         <div className="content text-white">
                                             <h2>{banner.title}</h2>
                                             <h3>{banner.price}</h3>
+                                            <h3>{banner.description}</h3>
                                         </div>
                                     )}
                                 </div>
