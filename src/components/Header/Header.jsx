@@ -70,7 +70,7 @@ const Topbar = () => {
               </div>
               <ul className="user-login">
                 <li>
-                  <Link to="login.html">ログイン</Link>
+                  <Link to="/login">ログイン</Link>
                 </li>
                 <li>
                   <Link to="register.html">登録する</Link>
@@ -139,8 +139,8 @@ const HeaderMiddle = () => {
                   </Link>
                   <div className="shopping-item">
                     <div className="dropdown-cart-header">
-                      <span>2 Items</span>
-                      <Link to="cart.html">View Cart</Link>
+                      <span>2 項目</span>
+                      <Link to="cart.html">カートを見る</Link>
                     </div>
                     <ul className="shopping-list">
                       <li>
@@ -158,7 +158,7 @@ const HeaderMiddle = () => {
                         <div className="content">
                           <h4>
                             <Link to="product-details.html">
-                              Apple Watch Series 6
+                            製品ー１
                             </Link>
                           </h4>
                           <p className="quantity">
@@ -180,7 +180,7 @@ const HeaderMiddle = () => {
                         </div>
                         <div className="content">
                           <h4>
-                            <Link to="product-details.html">Wi-Fi Smart Camera</Link>
+                            <Link to="product-details.html">製品ー２</Link>
                           </h4>
                           <p className="quantity">
                             1x - <span className="amount">$35.00</span>
@@ -190,7 +190,7 @@ const HeaderMiddle = () => {
                     </ul>
                     <div className="bottom">
                       <div className="total">
-                        <span>Total</span>
+                        <span>合計</span>
                         <span className="total-amount">$134.00</span>
                       </div>
                       <div className="button">

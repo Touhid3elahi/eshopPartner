@@ -23,24 +23,26 @@ const Footer = () => {
                             <div className="col-lg-9 col-md-8 col-12">
                                 <div className="footer-newsletter">
                                     <h4 className="title">
-                                        Subscribe to our Newsletter
-                                        <span>Get all the latest information, Sales and Offers.</span>
+                                        ニュースレターを購読する
+                                        <span>最新情報、セール、特別オファーをお届けします。</span>
                                     </h4>
                                     <div className="newsletter-form-head">
                                         <form action="#" method="get" target="_blank" className="newsletter-form">
                                             <input
                                                 name="EMAIL"
-                                                placeholder="Email address here..."
+                                                placeholder="メールアドレスを入力してください..."
                                                 type="email"
+                                                required
                                             />
                                             <div className="button">
                                                 <button className="btn">
-                                                    Subscribe<span className="dir-part"></span>
+                                                    購読する<span className="dir-part"></span>
                                                 </button>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
