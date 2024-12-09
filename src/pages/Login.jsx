@@ -5,7 +5,6 @@ import Footer from '../components/Footer/Footer';
 const Login = () => {
     return (
         <>
-            <Header />
             <div className="account-login mt-2 mb-4">
                 <div className="container">
                     <div className="row">
@@ -38,7 +37,6 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </>
 
     );

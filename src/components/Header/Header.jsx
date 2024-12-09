@@ -73,7 +73,7 @@ const Topbar = () => {
                   <Link to="/login">ログイン</Link>
                 </li>
                 <li>
-                  <Link to="register.html">登録する</Link>
+                  <Link to="/registration">登録する</Link>
                 </li>
               </ul>
             </div>
@@ -140,7 +140,7 @@ const HeaderMiddle = () => {
                   <div className="shopping-item">
                     <div className="dropdown-cart-header">
                       <span>2 項目</span>
-                      <Link to="cart.html">カートを見る</Link>
+                      <Link to="/cart">カートを見る</Link>
                     </div>
                     <ul className="shopping-list">
                       <li>
@@ -195,7 +195,7 @@ const HeaderMiddle = () => {
                       </div>
                       <div className="button">
                         <Link to="checkout.html" className="btn animate">
-                          Checkout
+                        購入手続き
                         </Link>
                       </div>
                     </div>
@@ -211,65 +211,14 @@ const HeaderMiddle = () => {
 };
 
 const HeaderBottom = () => {
-  const [isExpanded, setIsExpanded] = useState(true); // Set to true to expand by default
+   // Set to true to expand by default
 
   return (
     <div className="container">
       <div className="row align-items-center">
         <div className="col-lg-8 col-md-6 col-12">
           <div className="nav-inner">
-            <div className="mega-category-menu">
-              <span
-                className="cat-button"
-                onClick={() => setIsExpanded(!isExpanded)}
-              >
-                <i className="lni lni-menu"></i>全てのカテゴリー
-              </span>
-              <ul
-                className={`sub-category ${isExpanded ? 'expanded' : 'collapsed'
-                  }`}
-              >
-                <li>
-                  <Link to="product-grids.html">
-                    カテゴリー 1 <i className="lni lni-chevron-right"></i>
-                  </Link>
-                  <ul className="inner-sub-category">
-                    <li>
-                      <Link to="product-grids.html">サブカテゴリ 1.1</Link>
-                    </li>
-                    <li>
-                      <Link to="product-grids.html">サブカテゴリ 1.2</Link>
-                    </li>
-                    <li>
-                      <Link to="product-grids.html">サブカテゴリ 1.3</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <Link to="product-grids.html">カテゴリー 2</Link>
-                  <ul className="inner-sub-category">
-                    <li>
-                      <Link to="product-grids.html">サブカテゴリ 1.1</Link>
-                    </li>
-                    <li>
-                      <Link to="product-grids.html">サブカテゴリ 1.2</Link>
-                    </li>
-                    <li>
-                      <Link to="product-grids.html">サブカテゴリ 1.3</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <Link to="product-grids.html">カテゴリー 3</Link>
-                </li>
-                <li>
-                  <Link to="product-grids.html">カテゴリー 4</Link>
-                </li>
-                <li>
-                  <Link to="product-grids.html">カテゴリー 5</Link>
-                </li>
-              </ul>
-            </div>
+            
             <nav className="navbar navbar-expand-lg">
               <button
                 className="navbar-toggler mobile-menu-btn"
