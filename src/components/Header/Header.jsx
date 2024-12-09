@@ -51,7 +51,7 @@ const Topbar = () => {
                   <Link to="index.html">Home</Link>
                 </li>
                 <li>
-                  <Link to="about-us.html">DenkiShopにすいて</Link>
+                  <Link to="about-us.html">私たちについて</Link>
                 </li>
                 <li>
                   <Link to="/product-grid">製品リスト</Link>
@@ -310,7 +310,7 @@ const HeaderBottom = () => {
         </div>
         <div className="col-lg-4 col-md-6 col-12">
           <div className="nav-social">
-            <h5 className="title">Follow Us:</h5>
+            <h5 className="title">フォローしてください:</h5>
             <ul>
               <li>
                 <Link to="#">

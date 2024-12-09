@@ -130,23 +130,24 @@ const Footer = () => {
                             {/* Payment Section */}
                             <div className="col-lg-4 col-12">
                                 <div className="payment-gateway">
-                                    <span>We Accept:</span>
-                                    <img src={credit} alt="Payment Methods" />
+                                    <span>お支払い方法:</span>
+                                    <img src={credit} alt="お支払い方法" />
                                 </div>
+
                             </div>
                             {/* Copyright Section */}
                             <div className="col-lg-4 col-12">
                                 <div className="copyright">
                                     <p>
-                                        Designed and Developed by
-                                        <Link to="#" rel="nofollow" target="_blank">go-Partner</Link>
+                                        © 2024 <Link to="#" rel="nofollow" target="_blank">go-Partner</Link>
+                                        、デザインおよび開発
                                     </p>
                                 </div>
                             </div>
                             {/* Social Media Section */}
                             <div className="col-lg-4 col-12">
                                 <ul className="socila">
-                                    <li><span>Follow Us On:</span></li>
+                                    <li><span>フォローしてください:</span></li>
                                     <li><Link to="#"><i className="lni lni-facebook-filled"></i></Link></li>
                                     <li><Link to="#"><i className="lni lni-twitter-original"></i></Link></li>
                                     <li><Link to="#"><i className="lni lni-instagram"></i></Link></li>
