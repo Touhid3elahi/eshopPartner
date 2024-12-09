@@ -3,9 +3,9 @@ import CategoryItem from './CategoryItem';
 
 const FeaturedCategories = () => {
   const categories = Array.from({ length: 6 }, (_, index) => ({
-    title: `製品${index + 1}`,
+    title: `カテゴリ-タイトル${index + 1}`,
     items: Array.from({ length: 5 }, (_, itemIndex) => ({
-      name: `項目 テストデータ${itemIndex + 1}`,
+      name: itemIndex === 4 ? "すべてを見る" : `サブカテゴリ-${itemIndex + 1}`,
       link: "product-grids.html",
     })),
     image: "https://via.placeholder.com/180x180",

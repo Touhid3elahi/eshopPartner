@@ -58,7 +58,7 @@ const Topbar = () => {
                 </li>
 
                 <li>
-                  <Link to="contact.html">店舗案内</Link>
+                  <Link to="contact.html">お問い合わせ</Link>
                 </li>
               </ul>
             </div>
@@ -301,7 +301,7 @@ const HeaderBottom = () => {
                     <Link to="/product-grid">製品リスト</Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="contact.html">店舗案内</Link>
+                    <Link to="contact.html">お問い合わせ</Link>
                   </li>
                 </ul>
               </div>

@@ -61,8 +61,7 @@ const Footer = () => {
                                     <h3>お問い合わせ</h3>
                                     <p className="phone">☎: +1 (900) 33 169 7720</p>
                                     <ul>
-                                        <li><span>月曜日-金曜日: </span> 9.00 午後 - 8.00 午前</li>
-                                        <li><span>土曜日: </span> 10.00 am - 6.00 pm</li>
+                                        <li><span>月曜日-金曜日: </span> 9.00 - 20.00</li>
                                     </ul>
                                     <p className="mail">
                                         <Link to="#">support@DenkiHub.com</Link>
