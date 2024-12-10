@@ -36,7 +36,15 @@ const Hero = () => {
         { name: 'カテゴリー 5' },
     ];
 
-    
+    const manufacturers = [
+        { name: 'メーカー 1' },
+        { name: 'メーカー 2' },
+        { name: 'メーカー 3' },
+        { name: 'メーカー 4' },
+        { name: 'メーカー 5' },
+    ];
+
+
 
     const sliderItems = [
         {
@@ -51,6 +59,14 @@ const Hero = () => {
             price: '値段',
             bgImage: 'https://via.placeholder.com/800x500',
         },
+    ];
+
+    const usageScenes = [
+        { name: '利用シーン1' },
+        { name: '利用シーン2' },
+        { name: '利用シーン3' },
+        { name: '利用シーン4' },
+        { name: '利用シーン5' },
     ];
 
     const rightBanners = [
@@ -104,32 +120,42 @@ const Hero = () => {
                                     </li>
                                 ))}
                             </ul>
-                        </div>
-                        <div className="mega-category-menu">
                             <span
-                                className="cat-button"
+                                className="cat-button mt-3"
                                 onClick={() => setIsExpanded(!isExpanded)}
                             >
-                                <i className="lni lni-menu"></i> メーカーから探す
+                                🏭 メーカーから探す
                             </span>
                             <ul className={`sub-category ${isExpanded ? 'expanded' : 'collapsed'}`}>
-                                {categories.map((category, index) => (
+                                {manufacturers.map((manufacturer, index) => (
                                     <li key={index}>
                                         <Link to="product-grids.html">
-                                            {category.name} {category.subCategories && <i className="lni lni-chevron-right"></i>}
+                                            <i className="lni lni-chevron-right"></i> {manufacturer.name}
                                         </Link>
-                                        {category.subCategories && (
-                                            <ul className="inner-sub-category">
-                                                {category.subCategories.map((subCat, subIndex) => (
-                                                    <li key={subIndex}>
-                                                        <Link to="product-grids.html">{subCat}</Link>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        )}
                                     </li>
                                 ))}
                             </ul>
+                            <div className="usage-scenes-menu">
+            {/* Button to toggle menu */}
+            <span
+                className="cat-button mt-3"
+                onClick={() => setIsExpanded(!isExpanded)}
+                style={{ cursor: 'pointer', display: 'block', fontSize: '16px' }}
+            >
+                🗂 利用シーンから探す
+            </span>
+
+            {/* List of Usage Scenes */}
+            <ul className={`sub-category ${isExpanded ? 'expanded' : 'collapsed'}`} style={{ marginTop: '10px' }}>
+                {usageScenes.map((scene, index) => (
+                    <li key={index} style={{ marginBottom: '8px' }}>
+                        <Link to="product-grids.html" style={{ textDecoration: 'none', color: '#333' }}>
+                            ➡ {scene.name}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+        </div>
                         </div>
                         {smallBanners.map((banner, index) => (
                             <div
@@ -207,7 +233,7 @@ const Hero = () => {
                             ))}
                         </div>
                         <div className="row">
-                            <BusinessDayCalendar/>
+                            <BusinessDayCalendar />
                         </div>
                     </div>
                 </div>

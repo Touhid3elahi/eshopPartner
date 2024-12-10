@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from '../../assets/images/logo/デンカハブ.png';
+import NotificationIcon from '../Notification';
 
 const Topbar = () => {
 
@@ -65,6 +66,10 @@ const Topbar = () => {
           </div>
           <div className="col-lg-3 col-md-3 col-12">
             <div className="top-end">
+
+              <div className="user mx-2">
+                <NotificationIcon />
+              </div>
               <div className="user">
                 <i className="lni lni-user"></i> Hello
               </div>
@@ -129,8 +134,9 @@ const HeaderMiddle = () => {
                 <div className="wishlist">
                   <Link to="#">
                     <i className="lni lni-heart"></i>
-                    <span className="total-items">0</span>
+                    <span className="total-items">2</span> {/* Updated to 2 */}
                   </Link>
+
                 </div>
                 <div className="cart-items">
                   <Link to="#" className="main-btn">
@@ -158,7 +164,7 @@ const HeaderMiddle = () => {
                         <div className="content">
                           <h4>
                             <Link to="product-details.html">
-                            製品ー１
+                              製品ー１
                             </Link>
                           </h4>
                           <p className="quantity">
@@ -195,13 +201,14 @@ const HeaderMiddle = () => {
                       </div>
                       <div className="button">
                         <Link to="checkout.html" className="btn animate">
-                        購入手続き
+                          購入手続き
                         </Link>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -211,14 +218,14 @@ const HeaderMiddle = () => {
 };
 
 const HeaderBottom = () => {
-   // Set to true to expand by default
+  // Set to true to expand by default
 
   return (
     <div className="container">
       <div className="row align-items-center">
         <div className="col-lg-8 col-md-6 col-12">
           <div className="nav-inner">
-            
+
             <nav className="navbar navbar-expand-lg">
               <button
                 className="navbar-toggler mobile-menu-btn"
@@ -240,7 +247,7 @@ const HeaderBottom = () => {
                 <ul id="nav" className="navbar-nav ms-auto">
                   <li className="nav-item">
                     <Link to="index.html" className="active">
-                    ホーム
+                      ホーム
                     </Link>
                   </li>
                   <li className="nav-item">
