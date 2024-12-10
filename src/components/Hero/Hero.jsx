@@ -4,6 +4,7 @@ import 'tiny-slider/dist/tiny-slider.css';
 import BusinessDayCalendar from "../../components/weekday/BusinessDayCalendar "
 const Hero = () => {
     const [isExpanded, setIsExpanded] = useState(true);
+    const [searchCode, setSearchCode] = useState("");
 
     useEffect(() => {
         const tns = require('tiny-slider').tns;
@@ -136,26 +137,35 @@ const Hero = () => {
                                 ))}
                             </ul>
                             <div className="usage-scenes-menu">
-            {/* Button to toggle menu */}
-            <span
-                className="cat-button mt-3"
-                onClick={() => setIsExpanded(!isExpanded)}
-                style={{ cursor: 'pointer', display: 'block', fontSize: '16px' }}
-            >
-                🗂 利用シーンから探す
-            </span>
+                                {/* Button to toggle menu */}
+                                <span
+                                    className="cat-button mt-3"
+                                    onClick={() => setIsExpanded(!isExpanded)}
+                                    style={{ cursor: 'pointer', display: 'block', fontSize: '16px' }}
+                                >
+                                    🗂 利用シーンから探す
+                                </span>
 
-            {/* List of Usage Scenes */}
-            <ul className={`sub-category ${isExpanded ? 'expanded' : 'collapsed'}`} style={{ marginTop: '10px' }}>
-                {usageScenes.map((scene, index) => (
-                    <li key={index} style={{ marginBottom: '8px' }}>
-                        <Link to="product-grids.html" style={{ textDecoration: 'none', color: '#333' }}>
-                            ➡ {scene.name}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-        </div>
+                                {/* List of Usage Scenes */}
+                                <ul className={`sub-category ${isExpanded ? 'expanded' : 'collapsed'}`} style={{ marginTop: '10px' }}>
+                                    {usageScenes.map((scene, index) => (
+                                        <li key={index} style={{ marginBottom: '8px' }}>
+                                            <Link to="product-grids.html" style={{ textDecoration: 'none', color: '#333' }}>
+                                                ➡ {scene.name}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className="search-by-code mb-3">
+                                <input
+                                    type="text"
+                                    placeholder="直接購入(クイックオーダー)"
+                                    value={searchCode}
+                                    onChange={(e) => setSearchCode(e.target.value)}
+                                    className="form-control"
+                                />
+                            </div>
                         </div>
                         {smallBanners.map((banner, index) => (
                             <div

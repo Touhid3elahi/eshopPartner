@@ -2,50 +2,57 @@ import React from "react";
 
 const BusinessDayCalendar = () => {
   return (
-    <div className="box2 box">
-      <h3 className="text-small border border-dark text-center p-2">
-      営業日カレンダー
-      </h3>
-
-      <div className="calendar-cont">
-        {/* Embedded Calendars */}
-        <iframe
-          src="https://www.denzai-net.jp/calendar/index.html"
-          title="Business Calendar 1"
-          width="100%"
-          height="400px"
-          frameBorder="0"
-          style={{ border: "0" }}
-          allowFullScreen
-        ></iframe>
-        <iframe
-          src="https://www.denzai-net.jp/calendar/index-n.html"
-          title="Business Calendar 2"
-          width="100%"
-          height="400px"
-          frameBorder="0"
-          style={{ border: "0" }}
-          allowFullScreen
-        ></iframe>
+    <div className="container my-5">
+      {/* カレンダーセクション */}
+      <div className="card shadow-sm">
+        <div className="card-header bg-dark text-white text-center">
+          <h3 className="mb-0">営業日カレンダー</h3>
+        </div>
+        <div className="card-body">
+          <div className="row">
+            {/* カレンダー (プレースホルダー) */}
+            <div className="col-md-12 text-center">
+              <div
+                style={{
+                  width: "100%",
+                  height: "400px",
+                  border: "1px solid #ddd",
+                  borderRadius: "8px",
+                  backgroundColor: "#f9f9f9",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  fontSize: "18px",
+                  color: "#888",
+                }}
+              >
+                カレンダー表示エリア
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="business-info text-small text-left mt-3">
-        <p className="d-none">
-          <span className="text-secondary">■</span> Operator is absent today
-        </p>
-        <p className="holiday-string">This is an operator-free day.</p>
-        <p>Business days: Monday to Friday</p>
-        <p>Closed: Saturdays, Sundays, and holidays</p>
-        <p>Delivery business holidays: Sundays and holidays</p>
-
-        <hr />
-
-        <p className="text-center">
-          We accept <strong>orders</strong> <br />
-          <span className="text-warning bold">24 hours a day, 365 days a year.</span>
-        </p>
-
-        <hr />
+      {/* 営業情報セクション */}
+      <div className="card mt-4 shadow-sm">
+        <div className="card-body">
+          <div className="text-left">
+            <p className="d-none">
+              <span className="text-secondary">■</span> 本日はオペレーターが不在です
+            </p>
+            <p className="text-danger">本日はオペレーターの不在日です。</p>
+            <p><strong>営業日:</strong> 月曜日から金曜日</p>
+            <p><strong>定休日:</strong> 土曜日、日曜日、祝日</p>
+            <p><strong>配送業務の休業日:</strong> 日曜日、祝日</p>
+          </div>
+          <hr />
+          <div className="text-center">
+            <p>
+              <strong>注文受付:</strong> <br />
+              <span className="text-warning bold">年中無休、24時間対応</span>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
