@@ -36,6 +36,20 @@ const Hero = () => {
         { name: 'カテゴリー 5' },
     ];
 
+    const categories = [
+        {
+            name: 'カテゴリー 1',
+            subCategories: ['サブカテゴリ 1.1', 'サブカテゴリ 1.2', 'サブカテゴリ 1.3'],
+        },
+        {
+            name: 'カテゴリー 2',
+            subCategories: ['サブカテゴリ 2.1', 'サブカテゴリ 2.2', 'サブカテゴリ 2.3'],
+        },
+        { name: 'カテゴリー 3' },
+        { name: 'カテゴリー 4' },
+        { name: 'カテゴリー 5' },
+    ];
+
     const sliderItems = [
         {
             title: 'おすすめ商品画像',
@@ -77,6 +91,32 @@ const Hero = () => {
                                 onClick={() => setIsExpanded(!isExpanded)}
                             >
                                 <i className="lni lni-menu"></i> 全てのカテゴリー
+                            </span>
+                            <ul className={`sub-category ${isExpanded ? 'expanded' : 'collapsed'}`}>
+                                {categories.map((category, index) => (
+                                    <li key={index}>
+                                        <Link to="product-grids.html">
+                                            {category.name} {category.subCategories && <i className="lni lni-chevron-right"></i>}
+                                        </Link>
+                                        {category.subCategories && (
+                                            <ul className="inner-sub-category">
+                                                {category.subCategories.map((subCat, subIndex) => (
+                                                    <li key={subIndex}>
+                                                        <Link to="product-grids.html">{subCat}</Link>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="mega-category-menu">
+                            <span
+                                className="cat-button"
+                                onClick={() => setIsExpanded(!isExpanded)}
+                            >
+                                <i className="lni lni-menu"></i> メーカーから探す
                             </span>
                             <ul className={`sub-category ${isExpanded ? 'expanded' : 'collapsed'}`}>
                                 {categories.map((category, index) => (

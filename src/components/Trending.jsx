@@ -48,17 +48,7 @@ const TrendingProduct = () => {
       discount: null,
       isNew: true,
     },
-    {
-      id: 5,
-      image: "https://via.placeholder.com/335x335",
-      category: "カテゴリー5", // Headphones in Japanese
-      title: "タイトル5", // Wireless Headphones
-      price: "¥35,000",
-      reviews: 5.0,
-      reviewCount: 5,
-      discount: null,
-      isNew: false,
-    },
+   
   ];
 
   return (
