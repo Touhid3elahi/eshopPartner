@@ -101,8 +101,8 @@ const HeaderMiddle = () => {
                   <div className="select-position">
                     <select id="select1">
                       <option selected>全て</option>
-                      <option value="1">Option 01</option>
-                      <option value="2">Option 02</option>
+                      <option value="1">カテゴリー 1</option>
+                      <option value="2">カテゴリー 2</option>
                     </select>
                   </div>
                 </div>
