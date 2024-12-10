@@ -157,7 +157,7 @@ const Hero = () => {
                                     ))}
                                 </ul>
                             </div>
-                            <div className="search-by-code mb-3">
+                            <div className="search-by-code my-3">
                                 <input
                                     type="text"
                                     placeholder="直接購入(クイックオーダー)"
