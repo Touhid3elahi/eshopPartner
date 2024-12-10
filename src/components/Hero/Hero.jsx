@@ -36,19 +36,7 @@ const Hero = () => {
         { name: 'カテゴリー 5' },
     ];
 
-    const categories = [
-        {
-            name: 'カテゴリー 1',
-            subCategories: ['サブカテゴリ 1.1', 'サブカテゴリ 1.2', 'サブカテゴリ 1.3'],
-        },
-        {
-            name: 'カテゴリー 2',
-            subCategories: ['サブカテゴリ 2.1', 'サブカテゴリ 2.2', 'サブカテゴリ 2.3'],
-        },
-        { name: 'カテゴリー 3' },
-        { name: 'カテゴリー 4' },
-        { name: 'カテゴリー 5' },
-    ];
+    
 
     const sliderItems = [
         {
