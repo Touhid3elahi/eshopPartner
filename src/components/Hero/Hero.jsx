@@ -40,8 +40,14 @@ const Hero = () => {
 
     const sliderItems = [
         {
-            title: 'おすすめ商品画像',
-            description: '記載内容\n・商品名\n・値段\n・商品概要',
+            title: 'おすすめ商品',
+            description: '・商品名\n・値段\n・商品概要',
+            price: '値段',
+            bgImage: 'https://via.placeholder.com/800x500',
+        },
+        {
+            title: 'セール品画像',
+            description: '・商品名\n・値段\n・商品概要',
             price: '値段',
             bgImage: 'https://via.placeholder.com/800x500',
         },
