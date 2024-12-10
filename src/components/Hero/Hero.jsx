@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'tiny-slider/dist/tiny-slider.css';
-
+import BusinessDayCalendar from "../../components/weekday/BusinessDayCalendar "
 const Hero = () => {
     const [isExpanded, setIsExpanded] = useState(true);
 
@@ -171,6 +171,9 @@ const Hero = () => {
                                     )}
                                 </div>
                             ))}
+                        </div>
+                        <div className="row">
+                            <BusinessDayCalendar/>
                         </div>
                     </div>
                 </div>
