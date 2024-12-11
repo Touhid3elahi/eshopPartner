@@ -13,7 +13,7 @@ const Topbar = () => {
             <div className="top-left">
               <ul className="menu-top-link">
                 <li>
-                  <div className="select-position">
+                  {/* <div className="select-position">
                     <select id="select4">
                       <option value="0" selected>
                         ¥ JPY
@@ -24,10 +24,10 @@ const Topbar = () => {
                       <option value="4">¥ CNY</option>
                       <option value="5">৳ BDT</option>
                     </select>
-                  </div>
+                  </div> */}
                 </li>
                 <li>
-                  <div className="select-position">
+                  {/* <div className="select-position">
                     <select id="select5">
                       <option value="0" selected>
                         日本語1
@@ -40,7 +40,7 @@ const Topbar = () => {
                       <option value="4">العربية</option>
                       <option value="5">বাংলা</option>
                     </select>
-                  </div>
+                  </div> */}
                 </li>
               </ul>
             </div>
@@ -51,19 +51,19 @@ const Topbar = () => {
                 <li>
                   <Link to="index.html">ホーム</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="about-us.html">私たちについて</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to="/product-grid">製品リスト</Link>
                 </li>
 
-                <li>
+                {/* <li>
                   <Link to="contact.html">お問い合わせ</Link>
                 </li>
                 <li>
                   <Link to="contact.html">ご利用ガイド</Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -80,9 +80,9 @@ const Topbar = () => {
                 <li>
                   <Link to="/login">ログイン</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/registration">登録する</Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -130,7 +130,7 @@ const HeaderMiddle = () => {
               <div className="nav-hotline">
                 <i className="lni lni-phone"></i>
                 <h3>
-                  ホットライン: <span>(+100) 123 456 7890</span>
+                  TEL: <span>080 XXXX XXXX</span>
                 </h3>
               </div>
               <div className="navbar-cart">
@@ -253,39 +253,25 @@ const HeaderBottom = () => {
                       ホーム
                     </Link>
                   </li>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link to="about-us.html">私たちについて</Link>
-                  </li>
+                  </li> */}
                   <li className="nav-item">
                     <Link to="/product-grid">製品リスト</Link>
                   </li>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link to="contact.html">お問い合わせ</Link>
                   </li>
                   <li className="nav-item">
                     <Link to="contact.html">ご利用ガイド</Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </nav>
           </div>
         </div>
         <div className="col-lg-4 col-md-6 col-12">
-          <div className="nav-social">
-            <h5 className="title">フォローしてください:</h5>
-            <ul>
-              <li>
-                <Link to="#">
-                  <i className="lni lni-facebook-filled"></i>
-                </Link>
-              </li>
-              <li>
-                <Link to="#">
-                  <i className="lni lni-twitter-original"></i>
-                </Link>
-              </li>
-            </ul>
-          </div>
+          
         </div>
       </div>
     </div>

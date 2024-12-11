@@ -18,7 +18,7 @@ const Productlist = () => {
                             <div className="single-widget search">
                                 <h3>製品を検索</h3>
                                 <form action="#">
-                                    <input type="text" placeholder="Search Here..." />
+                                    <input type="text" placeholder="ここで検索してください" />
                                     <button type="submit">
                                         <i className="lni lni-search-alt"></i>
                                     </button>

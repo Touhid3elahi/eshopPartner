@@ -48,18 +48,18 @@ const Hero = () => {
 
 
     const sliderItems = [
-        {
-            title: 'おすすめ商品',
-            description: '・商品名\n・値段\n・商品概要',
-            price: '値段',
-            bgImage: 'https://via.placeholder.com/800x500',
-        },
-        {
-            title: 'セール品画像',
-            description: '・商品名\n・値段\n・商品概要',
-            price: '値段',
-            bgImage: 'https://via.placeholder.com/800x500',
-        },
+      {
+      title: "おすすめ商品",
+      description: "・商品名\n・値段\n・商品概要", // Line breaks
+      price: "値段",
+      bgImage: "https://via.placeholder.com/800x500",
+    },
+    {
+      title: "セール品画像",
+      description: "・商品名\n・値段\n・商品概要", // Line breaks
+      price: "値段",
+      bgImage: "https://via.placeholder.com/800x500",
+    },
     ];
 
     const usageScenes = [
@@ -73,12 +73,12 @@ const Hero = () => {
     const rightBanners = [
         {
             title: 'おすすめ商品画像',
-            description: '記載内容\n・商品名\n・値段\n・商品概要',
+            description: '',
             bgImage: 'https://via.placeholder.com/370x250',
         },
         {
-            title: '宣伝文',
-            description: '例）週末セール20%OFF',
+            title: 'おすすめ商品画像',
+            description: '',
             bgColor: '#007bff',
             bgImage: 'https://via.placeholder.com/370x250',
         },
