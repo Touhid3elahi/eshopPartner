@@ -11,7 +11,7 @@ const Footer = () => {
             {/* End Footer Top */}
 
             {/* Start Footer Middle */}
-            <div className="footer-middle">
+            <div className="footer-middle1">
                 <div className="container">
                     <div className="bottom-inner">
                         <div className="row">
@@ -83,7 +83,7 @@ const Footer = () => {
 
 
                         </div>
-                        <div className="row d-flex justify-content-center mt-2">
+                        <div className="row d-flex justify-content-center m-5">
                             {/* Footer Logo */}
                             <div className="col-lg-3 col-md-4 col-12">
                                 <div className="footer-logo">
@@ -91,6 +91,10 @@ const Footer = () => {
                                         <img src={logo} alt="Logo" />
                                     </Link>
                                 </div>
+                            </div>
+                            <div className="col-lg-3 col-md-4 col-12">
+                           <p>〒大津市におの浜4丁目1-25</p> 
+                           <p>TEL: (077)xxx xxxx(代)</p> 
                             </div>
                         </div>
                     </div>
