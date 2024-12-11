@@ -52,14 +52,13 @@ const TrendingProduct = () => {
   ];
 
   return (
-    <section className="trending-product section">
+    <section className="trending-product">
       <div className="container">
         <div className="row">
           <div className="col-12">
             <div className="section-title">
-              <h2>トレンド商品</h2> {/* Trending Product in Japanese */}
+              <h2>おすすめ商品</h2> {/* Trending Product in Japanese */}
               <p>
-                Lorem Ipsumの多くのバリエーションがありますが、大部分は何らかの形で変更されています。
               </p>
             </div>
           </div>

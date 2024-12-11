@@ -8,8 +8,8 @@ const BusinessDayCalendar = () => {
     <div className="container my-5">
       {/* Calendar Section */}
       <div className="card shadow-sm">
-        <div className="card-header bg-dark text-white text-center">
-          <h3 className="mb-0">営業日カレンダー</h3>
+        <div className="card-header bg-primary text-white text-center">
+          <h5 className="mb-0">営業日カレンダー</h5>
         </div>
         <div className="card-body">
           <div className="row">
@@ -19,8 +19,8 @@ const BusinessDayCalendar = () => {
                 style={{
                   display: "grid",
                   gridTemplateColumns: "repeat(7, 1fr)",
-                  gap: "5px",
-                  padding: "10px",
+                  gap: "2px",
+                  padding: "5px",
                   border: "1px solid #ddd",
                   borderRadius: "8px",
                   backgroundColor: "#f9f9f9",
@@ -33,7 +33,7 @@ const BusinessDayCalendar = () => {
                     style={{
                       fontWeight: "bold",
                       textAlign: "center",
-                      padding: "5px",
+                      padding: "2px",
                     }}
                   >
                     {day}
@@ -46,7 +46,7 @@ const BusinessDayCalendar = () => {
                     key={index}
                     style={{
                       textAlign: "center",
-                      padding: "10px",
+                      padding: "2px",
                       border: "1px solid #ddd",
                       borderRadius: "4px",
                       backgroundColor: index % 7 === 0 || index % 7 === 6 ? "#f8d7da" : "#fff",
@@ -66,7 +66,7 @@ const BusinessDayCalendar = () => {
       <div className="card mt-4 shadow-sm">
         <div className="card-body">
           <div className="text-left">
-            <p className="text-danger">本日はオペレーターの不在日です。</p>
+            <p className="text-danger">営業日</p>
             <p><strong>営業日:</strong> 月曜日から金曜日</p>
             <p><strong>定休日:</strong> 土曜日、日曜日、祝日</p>
             <p><strong>配送業務の休業日:</strong> 日曜日、祝日</p>

@@ -160,7 +160,7 @@ const Hero = () => {
                             <div className="search-by-code my-3">
                                 <input
                                     type="text"
-                                    placeholder="直接購入(クイックオーダー)"
+                                    placeholder="直接注文(商品番号)"
                                     value={searchCode}
                                     onChange={(e) => setSearchCode(e.target.value)}
                                     className="form-control"

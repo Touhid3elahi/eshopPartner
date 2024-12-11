@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
-import logo from '../../assets/images/logo/デンカハブ.png';
+import logo from '../../assets/images/logo/デンカハブ.gif';
 import NotificationIcon from '../Notification';
 
 const Topbar = () => {
