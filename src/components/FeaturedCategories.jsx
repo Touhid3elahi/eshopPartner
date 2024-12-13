@@ -18,7 +18,7 @@ const FeaturedCategories = () => {
         <div className="row">
           <div className="col-12">
             <div className="section-title">
-              <h2>注目商品</h2>
+              <h2>注目商品!!!</h2>
               <p>
                
               </p>

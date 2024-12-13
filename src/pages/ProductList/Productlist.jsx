@@ -16,7 +16,7 @@ const Productlist = () => {
                         <div className="product-sidebar">
                             {/* Search Widget */}
                             <div className="single-widget search">
-                                <h3>製品を検索</h3>
+                                <h3>商品を検索</h3>
                                 <form action="#">
                                     <input type="text" placeholder="ここで検索してください" />
                                     <button type="submit">
@@ -46,54 +46,11 @@ const Productlist = () => {
                                     </li>
                                 </ul>
                             </div>
-                            {/* Price Range Widget */}
-                            <div className="single-widget range">
-                                <h3>価格帯</h3>
-                                <input
-                                    type="range"
-                                    className="form-range"
-                                    name="range"
-                                    step="1"
-                                    min="100"
-                                    max="10000"
-                                    defaultValue="10"
-                                    onChange={(e) => (document.getElementById("rangePrimary").value = e.target.value)}
-                                />
-                                <div className="range-inner">
-                                    <input type="text" id="rangePrimary" placeholder="100" /><span>円</span>
-                                </div>
-                            </div>
-                            {/* Filter by Price Widget */}
-                            <div className="single-widget condition">
-                                <h3>価格で絞り込む</h3>
-                                <div className="form-check">
-                                    <input className="form-check-input" type="checkbox" id="flexCheckDefault1" />
-                                    <label className="form-check-label" htmlFor="flexCheckDefault1">
-                                        50円 - 100円 (208)
-                                    </label>
-                                </div>
-                                <div className="form-check">
-                                    <input className="form-check-input" type="checkbox" id="flexCheckDefault2" />
-                                    <label className="form-check-label" htmlFor="flexCheckDefault2">
-                                        100円 - 500円 (311)
-                                    </label>
-                                </div>
-                                <div className="form-check">
-                                    <input className="form-check-input" type="checkbox" id="flexCheckDefault3" />
-                                    <label className="form-check-label" htmlFor="flexCheckDefault3">
-                                        500円 - 1,000円 (485)
-                                    </label>
-                                </div>
-                                <div className="form-check">
-                                    <input className="form-check-input" type="checkbox" id="flexCheckDefault4" />
-                                    <label className="form-check-label" htmlFor="flexCheckDefault4">
-                                        1,000円 - 5,000円 (213)
-                                    </label>
-                                </div>
-                            </div>
+                           
+                           
                             {/* Filter by Brand Widget */}
                             <div className="single-widget condition">
-                                <h3>ブランドで絞り込む</h3>
+                                <h3>メーカー絞り込む</h3>
                                 <div className="form-check">
                                     <input className="form-check-input" type="checkbox" id="flexCheckDefault11" />
                                     <label className="form-check-label" htmlFor="flexCheckDefault11">
@@ -160,7 +117,7 @@ const Productlist = () => {
                                                     <div className="product-info">
                                                         <span className="category">カテゴリプレースホルダー</span>
                                                         <h4 className="title">
-                                                            <a href="product-grids.html">製品名</a>
+                                                            <a href="product-grids.html">商品名</a>
                                                         </h4>
                                                         <div className="price">
                                                             <span>199.00円</span>

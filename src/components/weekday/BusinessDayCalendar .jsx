@@ -66,7 +66,7 @@ const BusinessDayCalendar = () => {
       <div className="card mt-4 shadow-sm">
         <div className="card-body">
           <div className="text-left">
-            <p className="text-danger">営業日</p>
+            <h6 className="text-danger">[営業日]</h6>
             <p><strong>営業日:</strong> 月曜日から金曜日</p>
             <p><strong>定休日:</strong> 土曜日、日曜日、祝日</p>
             <p><strong>配送業務の休業日:</strong> 日曜日、祝日</p>
