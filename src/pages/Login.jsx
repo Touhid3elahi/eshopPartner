@@ -12,11 +12,10 @@ const Login = () => {
                             <form className="card login-form" method="post">
                                 <div className="card-body">
                                     <div className="title">
-                                        <h3>今すぐログイン</h3>
-                                        <p>ソーシャルアカウントまたはメールアドレスでログインしてください。</p>
+                                        <h3>ログイン</h3>
                                     </div>
                                     <div className="form-group input-group">
-                                        <label>メールアドレス</label>
+                                        <label>ユーザーID</label>
                                         <input type="email" className="form-control" required />
                                     </div>
                                     <div className="form-group input-group">
@@ -29,7 +28,8 @@ const Login = () => {
                                     </div>
                                     </div>
                                     <p className="outer-link">
-                                        アカウントをお持ちではありませんか？ <a href="/register">こちらで登録</a>
+                                    アカウント作成の場合には、お問い合わせよりお問い合わせ下さい。
+                                    <a href="/register">お問い合わせ</a>
                                     </p>
                                 </div>
                             </form>

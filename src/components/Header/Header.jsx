@@ -19,7 +19,7 @@ const Topbar = () => {
                         ¥ JPY
                       </option>
                       <option value="1">€ EURO</option>
-                      <option value="2">$ CAD</option>
+                      <option value="2">円 CAD</option>
                       <option value="3">₹ INR</option>
                       <option value="4">¥ CNY</option>
                       <option value="5">৳ BDT</option>
@@ -55,7 +55,7 @@ const Topbar = () => {
                   <Link to="about-us.html">私たちについて</Link>
                 </li> */}
                 <li>
-                  <Link to="/product-grid">製品リスト</Link>
+                  <Link to="/product-grid">商品リスト</Link>
                 </li>
 
                 {/* <li>
@@ -167,11 +167,11 @@ const HeaderMiddle = () => {
                         <div className="content">
                           <h4>
                             <Link to="product-details.html">
-                              製品ー１
+                              商品ー１
                             </Link>
                           </h4>
                           <p className="quantity">
-                            1x - <span className="amount">$99.00</span>
+                            1x - <span className="amount">99円</span>
                           </p>
                         </div>
                       </li>
@@ -189,10 +189,10 @@ const HeaderMiddle = () => {
                         </div>
                         <div className="content">
                           <h4>
-                            <Link to="product-details.html">製品ー２</Link>
+                            <Link to="product-details.html">商品ー２</Link>
                           </h4>
                           <p className="quantity">
-                            1x - <span className="amount">$35.00</span>
+                            1x - <span className="amount">35円</span>
                           </p>
                         </div>
                       </li>
@@ -200,7 +200,7 @@ const HeaderMiddle = () => {
                     <div className="bottom">
                       <div className="total">
                         <span>合計</span>
-                        <span className="total-amount">$134.00</span>
+                        <span className="total-amount">134円</span>
                       </div>
                       <div className="button">
                         <Link to="checkout.html" className="btn animate">
@@ -257,7 +257,7 @@ const HeaderBottom = () => {
                     <Link to="about-us.html">私たちについて</Link>
                   </li> */}
                   <li className="nav-item">
-                    <Link to="/product-grid">製品リスト</Link>
+                    <Link to="/product-grid">商品リスト</Link>
                   </li>
                   {/* <li className="nav-item">
                     <Link to="contact.html">お問い合わせ</Link>
