@@ -7,6 +7,7 @@ import Cart from './pages/Cart/Cart';
 import Registration from './pages/Registration';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Checkout from './pages/Checkout/Checkout';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" />} />
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/product-grid" element={<ProductGrid />} />

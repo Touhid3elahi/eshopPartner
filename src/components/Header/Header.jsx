@@ -203,7 +203,7 @@ const HeaderMiddle = () => {
                         <span className="total-amount">134円</span>
                       </div>
                       <div className="button">
-                        <Link to="checkout.html" className="btn animate">
+                        <Link to="/checkout" className="btn animate">
                           購入手続き
                         </Link>
                       </div>
