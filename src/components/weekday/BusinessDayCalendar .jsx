@@ -1,7 +1,7 @@
 import React from "react";
 
 const BusinessDayCalendar = () => {
-  const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const daysOfWeek = ["日", "月", "火", "水", "木", "金", "土"];
   const placeholderDates = Array.from({ length: 31 }, (_, i) => i + 1); // Placeholder for dates
 
   return (

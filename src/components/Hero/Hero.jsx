@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'tiny-slider/dist/tiny-slider.css';
+import hero1 from '../../assets/images/hero/HERO2.png';
+import hero2 from '../../assets/images/hero/HERO3.png';
+import ad1 from '../../assets/images/hero/ADS.png';
 import BusinessDayCalendar from "../../components/weekday/BusinessDayCalendar "
 const Hero = () => {
     const [isExpanded, setIsExpanded] = useState(true);
@@ -11,7 +14,9 @@ const Hero = () => {
         tns({
             container: '.hero-slider',
             slideBy: 'page',
-            autoplay: true,
+            autoplay: false,
+            autoplayTimeout: 5000, // Set autoplay delay to 5000ms (5 seconds)
+            speed: 1000, // Set transition speed to 1000ms (1 second)
             autoplayButtonOutput: false,
             mouseDrag: true,
             gutter: 0,
@@ -21,6 +26,7 @@ const Hero = () => {
             controlsText: ['<i class="lni lni-chevron-left"></i>', '<i class="lni lni-chevron-right"></i>'],
         });
     }, []);
+    
 
     // Categories and banners for dynamic rendering
     const categories = [
@@ -52,13 +58,13 @@ const Hero = () => {
       title: "おすすめ商品",
       description: "・商品名\n・値段\n・商品概要", // Line breaks
       price: "値段",
-      bgImage: "https://via.placeholder.com/800x500",
+      bgImage: hero1,
     },
     {
       title: "セール品画像",
       description: "・商品名\n・値段\n・商品概要", // Line breaks
       price: "値段",
-      bgImage: "https://via.placeholder.com/800x500",
+      bgImage: hero2,
     },
     ];
 
@@ -74,20 +80,20 @@ const Hero = () => {
         {
             title: 'おすすめ商品画像',
             description: '',
-            bgImage: 'https://via.placeholder.com/370x250',
+            bgImage: hero1,
         },
         {
             title: 'おすすめ商品画像',
             description: '',
             bgColor: '#007bff',
-            bgImage: 'https://via.placeholder.com/370x250',
+            bgImage: hero2,
         },
     ];
 
     const smallBanners = [
-        { text: '広告1', bgImage: 'https://placehold.co/300x100?font=roboto' },
-        { text: '広告2', bgImage: 'https://placehold.co/300x100?font=roboto' },
-        { text: '広告3', bgImage: 'https://placehold.co/300x100?font=roboto' },
+        { text: '広告1', bgImage: ad1 },
+        { text: '広告2', bgImage: ad1 },
+        { text: '広告3', bgImage: ad1 },
     ];
 
     return (

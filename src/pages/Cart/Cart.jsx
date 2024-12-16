@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import product1 from '../../assets/images/product/product1.webp';
+import product2 from '../../assets/images/product/product2.webp';
+import product3 from '../../assets/images/product/product3.webp';
 
 const ShoppingCart = () => {
   const taxRate = 0.1; // Example tax rate: 10%
@@ -11,33 +14,36 @@ const ShoppingCart = () => {
 
   const products = [
     {
-      imgSrc: "https://via.placeholder.com/220x200",
-      name: "Canon EOS M50 ミラーレスカメラ",
+      imgSrc: product1,
+      name: "Compact Electric Saw",
       details: [
-        { label: "種類", value: "ミラーレス" },
-        { label: "カラー", value: "ブラック" },
+        { label: "Type", value: "Electric Tool" },
+        { label: "Features", value: "Precision Blade, Compact Design" },
+        { label: "Power", value: "1200W" },
       ],
-      price: 910,
-      discount: 29,
-    },
-    {
-      imgSrc: "https://via.placeholder.com/220x200",
-      name: "Apple iPhone X 256 GB スペースグレー",
-      details: [
-        { label: "メモリ", value: "256 GB" },
-        { label: "カラー", value: "スペースグレー" },
-      ],
-      price: 1100,
+      price: 15000,
       discount: 0,
     },
     {
-      imgSrc: "https://via.placeholder.com/220x200",
-      name: "HP LaserJet Pro レーザープリンター",
+      imgSrc: product2,
+      name: "Cordless Drill",
       details: [
-        { label: "種類", value: "レーザー" },
-        { label: "カラー", value: "ホワイト" },
+        { label: "Type", value: "Electric Tool" },
+        { label: "Features", value: "LED Lights, Ergonomic Grip" },
+        { label: "Battery", value: "20V Lithium-Ion" },
       ],
-      price: 550,
+      price: 12000,
+      discount: 500,
+    },
+    {
+      imgSrc: product3,
+      name: "Compact Electric Saw",
+      details: [
+        { label: "Type", value: "Electric Tool" },
+        { label: "Features", value: "Precision Blade, Compact Design" },
+        { label: "Power", value: "1200W" },
+      ],
+      price: 15000,
       discount: 0,
     },
   ];
