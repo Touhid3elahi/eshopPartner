@@ -15,36 +15,36 @@ const ShoppingCart = () => {
   const products = [
     {
       imgSrc: product1,
-      name: "Compact Electric Saw",
+      name: "コンパクト電動ノコギリ",
       details: [
-        { label: "Type", value: "Electric Tool" },
-        { label: "Features", value: "Precision Blade, Compact Design" },
-        { label: "Power", value: "1200W" },
+        { label: "種類", value: "電動工具" },
+        { label: "特徴", value: "精密ブレード、小型設計" },
+        { label: "パワー", value: "1200W" },
       ],
       price: 15000,
       discount: 0,
     },
     {
       imgSrc: product2,
-      name: "Cordless Drill",
+      name: "コードレスドリル",
       details: [
-        { label: "Type", value: "Electric Tool" },
-        { label: "Features", value: "LED Lights, Ergonomic Grip" },
-        { label: "Battery", value: "20V Lithium-Ion" },
+        { label: "種類", value: "電動工具" },
+        { label: "特徴", value: "LEDライト、エルゴノミックグリップ" },
+        { label: "バッテリー", value: "20V リチウムイオン" },
       ],
       price: 12000,
       discount: 500,
     },
     {
       imgSrc: product3,
-      name: "Compact Electric Saw",
+      name: "ハンドヘルド電動サンダー",
       details: [
-        { label: "Type", value: "Electric Tool" },
-        { label: "Features", value: "Precision Blade, Compact Design" },
-        { label: "Power", value: "1200W" },
+        { label: "種類", value: "電動工具" },
+        { label: "特徴", value: "滑らかなサンディングパッド、エルゴノミック設計" },
+        { label: "パワー", value: "300W" },
       ],
-      price: 15000,
-      discount: 0,
+      price: 8000,
+      discount: 300,
     },
   ];
 
