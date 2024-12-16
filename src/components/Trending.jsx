@@ -1,14 +1,17 @@
 import React from "react";
+import product1 from '../assets/images/product/product1.webp';
+import product2 from '../assets/images/product/product2.webp';
+import product3 from '../assets/images/product/product3.webp';
 
 const TrendingProduct = () => {
   // Product data in Japanese
   const products = [
     {
       id: 1,
-      image: "https://via.placeholder.com/335x335",
+      image: product1,
       category: "カテゴリー1", // Category 1 in Japanese
       title: "タイトル1", // Title 1 in Japanese
-      price: "¥19,800", // Example price in Japanese yen
+      price: "19,800円", // Example price in Japanese yen
       reviews: 4.0,
       reviewCount: 4,
       discount: null,
@@ -16,11 +19,11 @@ const TrendingProduct = () => {
     },
     {
       id: 2,
-      image: "https://via.placeholder.com/335x335",
+      image: product2,
       category: "カテゴリー2", // Speaker in Japanese
       title: "タイトル2", // Big Power Sound Speaker
-      price: "¥27,500",
-      originalPrice: "¥30,000",
+      price: "27,500800円",
+      originalPrice: "30,000800円",
       reviews: 5.0,
       reviewCount: 5,
       discount: "-25%",
@@ -28,10 +31,10 @@ const TrendingProduct = () => {
     },
     {
       id: 3,
-      image: "https://via.placeholder.com/335x335",
+      image: product3,
       category: "カテゴリー3", // Camera in Japanese
       title: "タイトル3", // WiFi Security Camera
-      price: "¥39,900",
+      price: "39,900800円",
       reviews: 5.0,
       reviewCount: 5,
       discount: null,
@@ -39,10 +42,10 @@ const TrendingProduct = () => {
     },
     {
       id: 4,
-      image: "https://via.placeholder.com/335x335",
+      image: product1,
       category: "カテゴリー4", // Smartphone in Japanese
       title: "タイトル4", // Same name as in English
-      price: "¥40,000",
+      price: "40,000800円",
       reviews: 5.0,
       reviewCount: 5,
       discount: null,
