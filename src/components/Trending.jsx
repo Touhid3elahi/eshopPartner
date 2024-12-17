@@ -22,8 +22,8 @@ const TrendingProduct = () => {
       image: product2,
       category: "カテゴリー2", // Speaker in Japanese
       title: "タイトル2", // Big Power Sound Speaker
-      price: "27,500800円",
-      originalPrice: "30,000800円",
+      price: "27,500円",
+      originalPrice: "30,000円",
       reviews: 5.0,
       reviewCount: 5,
       discount: "-25%",
@@ -34,7 +34,7 @@ const TrendingProduct = () => {
       image: product3,
       category: "カテゴリー3", // Camera in Japanese
       title: "タイトル3", // WiFi Security Camera
-      price: "39,900800円",
+      price: "39,900円",
       reviews: 5.0,
       reviewCount: 5,
       discount: null,

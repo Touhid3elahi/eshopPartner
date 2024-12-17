@@ -48,6 +48,9 @@ const ShoppingCart = () => {
     },
   ];
 
+  const formatPrice = (price) => price.toLocaleString("ja-JP"); // Japanese-style formatting
+
+
   const handleQuantityChange = (index, value) => {
     const updatedQuantities = [...quantities];
     updatedQuantities[index] = parseInt(value, 10);
@@ -71,12 +74,14 @@ const ShoppingCart = () => {
                 <th scope="col" style={{ width: "10%" }}>削除</th>
               </tr>
             </thead>
+
             <tbody>
               {products.map((product, index) => {
                 const quantity = quantities[index];
                 const subtotal = product.price * quantity;
                 const tax = subtotal * taxRate;
                 const total = subtotal + tax - product.discount;
+
                 return (
                   <tr key={index}>
                     <th scope="row">
@@ -111,19 +116,20 @@ const ShoppingCart = () => {
                         ))}
                       </select>
                     </td>
-                    <td>{subtotal}円</td>
-                    <td>{tax.toFixed(0)}円</td>
-                    <td>{product.discount > 0 ? product.discount : "—"}円</td>
-                    <td>{total.toFixed(0)}円</td>
+                    <td>{formatPrice(subtotal)}円</td>
+                    <td>{formatPrice(tax)}円</td>
+                    <td>{product.discount > 0 ? formatPrice(product.discount) : "—"}円</td>
+                    <td>{formatPrice(total)}円</td>
                     <td>
                       <button className="btn btn-danger rounded-circle btn-sm">
-                        <i className="lni lni-close"></i> 
+                        <i className="lni lni-close"></i>
                       </button>
                     </td>
                   </tr>
                 );
               })}
             </tbody>
+
           </table>
         </div>
 
@@ -151,25 +157,35 @@ const ShoppingCart = () => {
               <div className="right">
                 <ul>
                   <li>
-                    カート小計<span>{quantities.reduce((sum, qty, idx) => sum + products[idx].price * qty, 0)}円</span>
+                    カート小計
+                    <span>{formatPrice(quantities.reduce((sum, qty, idx) => sum + products[idx].price * qty, 0))}円</span>
                   </li>
                   <li>
                     配送<span>無料</span>
                   </li>
                   <li>
-                    割引<span>{products.reduce((sum, product, idx) => sum + product.discount, 0)}円</span>
+                    割引
+                    <span>{formatPrice(products.reduce((sum, product) => sum + product.discount, 0))}円</span>
                   </li>
                   <li>
-                    税金<span>{quantities.reduce((sum, qty, idx) => sum + products[idx].price * qty * taxRate, 0).toFixed(0)}円</span>
+                    税金
+                    <span>{formatPrice(quantities.reduce((sum, qty, idx) => sum + products[idx].price * qty * taxRate, 0))}円</span>
                   </li>
                   <li className="last">
-                    合計<span>{quantities.reduce((sum, qty, idx) => {
-                      const subtotal = products[idx].price * qty;
-                      const tax = subtotal * taxRate;
-                      return sum + subtotal + tax - products[idx].discount;
-                    }, 0).toFixed(0)}円</span>
+                    合計
+                    <span>
+                      {formatPrice(
+                        quantities.reduce((sum, qty, idx) => {
+                          const subtotal = products[idx].price * qty;
+                          const tax = subtotal * taxRate;
+                          return sum + subtotal + tax - products[idx].discount;
+                        }, 0)
+                      )}
+                      円
+                    </span>
                   </li>
                 </ul>
+
                 <div className="button">
                   <a href="checkout.html" className="btn">
                     購入

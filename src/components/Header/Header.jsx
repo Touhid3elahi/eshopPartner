@@ -2,9 +2,10 @@ import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from '../../assets/images/logo/デンカハブ.gif';
 import NotificationIcon from '../Notification';
+import product1 from '../../assets/images/product/product1.webp';
+import product2 from "../../assets/images/product/product2.webp";
 
 const Topbar = () => {
-
   return (
     <div className="topbar">
       <div className="container">
@@ -135,10 +136,10 @@ const HeaderMiddle = () => {
               </div>
               <div className="navbar-cart">
                 <div className="wishlist">
-                  <Link to="#">
+                  <a href={product1}>
                     <i className="lni lni-heart"></i>
                     <span className="total-items">2</span> {/* Updated to 2 */}
-                  </Link>
+                  </a>
 
                 </div>
                 <div className="cart-items">
@@ -158,10 +159,7 @@ const HeaderMiddle = () => {
                         </Link>
                         <div className="cart-img-head">
                           <Link className="cart-img" to="product-details.html">
-                            <img
-                              src="assets/images/header/cart-items/item1.jpg"
-                              alt="#"
-                            />
+                          <img src={product1} alt="商品1" />
                           </Link>
                         </div>
                         <div className="content">
@@ -171,7 +169,7 @@ const HeaderMiddle = () => {
                             </Link>
                           </h4>
                           <p className="quantity">
-                            1x - <span className="amount">99円</span>
+                            1x - <span className="amount">15,000円</span>
                           </p>
                         </div>
                       </li>
@@ -181,10 +179,7 @@ const HeaderMiddle = () => {
                         </Link>
                         <div className="cart-img-head">
                           <Link className="cart-img" href="product-details.html">
-                            <img
-                              src="assets/images/header/cart-items/item2.jpg"
-                              alt="#"
-                            />
+                          <img src={product2} alt="商品2" />
                           </Link>
                         </div>
                         <div className="content">
@@ -192,7 +187,7 @@ const HeaderMiddle = () => {
                             <Link to="product-details.html">商品ー２</Link>
                           </h4>
                           <p className="quantity">
-                            1x - <span className="amount">35円</span>
+                            1x - <span className="amount">12,000円</span>
                           </p>
                         </div>
                       </li>
