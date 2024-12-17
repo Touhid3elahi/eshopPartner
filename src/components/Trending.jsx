@@ -10,7 +10,7 @@ const TrendingProduct = () => {
       id: 1,
       image: product1,
       category: "カテゴリー1", // Category 1 in Japanese
-      title: "タイトル1", // Title 1 in Japanese
+      title: "コンパクト電動ノコギリ", // Title 1 in Japanese
       price: "19,800円", // Example price in Japanese yen
       reviews: 4.0,
       reviewCount: 4,
@@ -21,7 +21,7 @@ const TrendingProduct = () => {
       id: 2,
       image: product2,
       category: "カテゴリー2", // Speaker in Japanese
-      title: "タイトル2", // Big Power Sound Speaker
+      title: "コードレスドリル", // Big Power Sound Speaker
       price: "27,500円",
       originalPrice: "30,000円",
       reviews: 5.0,
@@ -33,7 +33,7 @@ const TrendingProduct = () => {
       id: 3,
       image: product3,
       category: "カテゴリー3", // Camera in Japanese
-      title: "タイトル3", // WiFi Security Camera
+      title: "ハンドヘルド電動サンダー", // WiFi Security Camera
       price: "39,900円",
       reviews: 5.0,
       reviewCount: 5,
@@ -44,7 +44,7 @@ const TrendingProduct = () => {
       id: 4,
       image: product1,
       category: "カテゴリー4", // Smartphone in Japanese
-      title: "タイトル4", // Same name as in English
+      title: "コンパクト電動ノコギリ", // Same name as in English
       price: "40,000800円",
       reviews: 5.0,
       reviewCount: 5,
